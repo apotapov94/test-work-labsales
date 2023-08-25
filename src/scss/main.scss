@@ -1,0 +1,27 @@
+@import "./common";
+
+body {
+  font-family: $primaryFont;
+  color: $textPrimaryColor;
+  background-image: url(../img/main-banner.jpg);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-size: $mainFontSize;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.container-sm {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section {
+  padding: 80px 0;
+}
+
+.m-0 {
+  margin: 0;
+}

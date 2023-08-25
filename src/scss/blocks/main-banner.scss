@@ -1,0 +1,93 @@
+.main-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 32px;
+
+  &-block {
+    padding: 64px 0 128px;
+    background-image: url("../img/clouds.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    .container {
+      max-width: 986px;
+    }
+  }
+  &__subtitle {
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    text-align: center;
+    span {
+      font-size: 35px;
+      font-weight: 700;
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 32px;
+    width: 100%;
+    margin-top: 6px;
+  }
+  &-card {
+    box-shadow: 0px 5px 15px 0px rgba(33, 45, 85, 0.2);
+    background: rgba(249, 252, 253, 1);
+    border-radius: 10px;
+    padding: 16px;
+    &__title {
+      font-size: 22px;
+      line-height: 25.52px;
+    }
+    &__value {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 26.6px;
+    }
+    &__wrap {
+      box-shadow: 0px 5px 15px 0px rgba(33, 45, 85, 0.1);
+      background: rgba(255, 255, 255, 1);
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      grid-gap: 8px;
+      position: relative;
+      &:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 1);
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -5px;
+        z-index: 1;
+        box-shadow: 0px 5px 15px 0px rgba(33, 45, 85, 0.15);
+      }
+      &::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #f1f5f7;
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -12px;
+      }
+    }
+    &:hover {
+      .main-banner-card__wrap {
+        &:before {
+          background: rgba(49, 190, 244, 1);
+          box-shadow: 0px 8px 15px 0px rgba(49, 190, 244, 0.25);
+        }
+      }
+    }
+  }
+}

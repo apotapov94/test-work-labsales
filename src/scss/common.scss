@@ -1,0 +1,18 @@
+//переменные
+@import "./vars";
+
+//сброс стилей
+@import "./reset";
+
+//элементы интерфейса
+@import "./UI/fonts";
+@import "./UI/links";
+@import "./UI/text";
+@import "./UI/buttons";
+
+//блоки
+@import "./blocks/header";
+@import "./blocks/main-banner";
+@import "./blocks/map-info";
+@import "./blocks/cards-block";
+@import "./blocks/news";
