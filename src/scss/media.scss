@@ -1,0 +1,53 @@
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  .main-banner-block .container {
+    max-width: 960px;
+  }
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .input {
+    width: 100%;
+    input {
+      width: 100%;
+    }
+  }
+  .custom-chbox + label {
+    display: inline;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+  .main-banner-block .container {
+    max-width: 720px;
+  }
+  .header__bottom-menu {
+    display: none;
+  }
+  .header__top-menu {
+    display: none;
+  }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-banner__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-banner__title {
+    text-align: center;
+  }
+  .gallery-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  .swiper {
+    width: 720px;
+  }
+}

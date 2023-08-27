@@ -25,3 +25,15 @@ body {
 .m-0 {
   margin: 0;
 }
+
+.swiper {
+  width: 300px;
+  &-slide {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+//медиазапросы
+@import "./media";

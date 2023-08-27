@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=5dad1850-e47f-4f43-941c-c843a5b28016&lang=ru_RU" type="text/javascript"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.css"
+      integrity="sha512-EDXaYrpumQKF+Ic8nuEsgJWBwMOhgwWvNINclFu91nx5VR4MeZ5xlUvyRaYQJTMImwbXSeDjtZMtTs8EB65Z0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header class="header">
@@ -16,7 +24,7 @@
           <nav class="header__top-menu">
             <ul>
               <li>
-                <a class="link" href=""> Жилые комплексы </a>
+                <a class="link" href="">Жилые комплексы </a>
               </li>
               <li>
                 <a class="link" href="">О компании</a>
@@ -175,7 +183,6 @@
         </div>
       </section>
       <section class="map-block">
-        <button onclick="openBalloon(1)">click</button>
         <h2>Наша инфраструктура</h2>
         <div class="map-wrap">
           <div id="map"></div>
@@ -308,9 +315,92 @@
           </div>
         </div>
       </section>
+      <section class="gallery-block">
+        <div class="container">
+          <h2>Описание Жилого Комплекса</h2>
+          <p class="gallery__message">Нажимайте < > чтобы подробно ознакомится с проектом</p>
+          <div class="gallery-tabs">
+            <div class="tab">
+              <div class="tab__wrap">Парковка</div>
+            </div>
+            <div class="tab">
+              <div class="tab__wrap">Архитектура</div>
+            </div>
+            <div class="tab">
+              <div class="tab__wrap">Охрана</div>
+            </div>
+            <div class="tab active">
+              <div class="tab__wrap">Территория</div>
+            </div>
+          </div>
+          <div class="gallery">
+            <div class="gallery__big-image" style="background-image: url('./assets/img/gallery/main.jpg')">
+              <div class="gallery__text">
+                <h3>Территория</h3>
+                <p>
+                  Жилой комплекс "Яблоновский" расположен на ул. Кобцевой Н.С. в пгт. Яблоновский. За пять минут пешком можно дойти до муниципальной
+                  поликлиники, школы и детского садика.
+                </p>
+                <p>
+                  Этот жилой комплекс располагается в непосредственной близости от улицы Гагарина, где проходит абсолютное большинство маршрутов общественного
+                  транспорта, соответственно легко добраться во все части поселка и города Краснодар. Тут же располагается магазин «Магнит», «Магнит Косметик»,
+                  МФЦ, овощной рынок, мебельные магазины, аптеки и другие предприятия сферы услуг.
+                </p>
+              </div>
+            </div>
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper gallery__slider">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="./assets/img/gallery/1.jpg" alt="" /></div>
+                <div class="swiper-slide"><img src="./assets/img/gallery/2.jpg" alt="" /></div>
+                <div class="swiper-slide"><img src="./assets/img/gallery/3.jpg" alt="" /></div>
+                <div class="swiper-slide"><img src="./assets/img/gallery/2.jpg" alt="" /></div>
+                <div class="swiper-slide"><img src="./assets/img/gallery/1.jpg" alt="" /></div>
+                <div class="swiper-slide"><img src="./assets/img/gallery/3.jpg" alt="" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <footer class="footer">
+      <div class="container">
+        <h2>Узнайте о выгодных предложениях и получите личную консультацию</h2>
+        <div class="footer__wrap">
+          <div class="footer__left">
+            <p>По любым возникающим Вами вопросов звоните нам напрямую</p>
+            <div class="footer__phone">
+              <div class="footer__phone-icon"><img src="./assets/img/phone-icon.svg" alt="" /></div>
+              <a href="tel:79183774810">+7 (918) 377-48-10</a>
+            </div>
+          </div>
+          <div class="footer__right">
+            <p>Или заполните форму</p>
+            <div class="footer__form">
+              <span class="footer__form-text">Сейчас мы работаем</span>
+              <form action="">
+                <div class="footer__form-inputs">
+                  <div class="input"><input type="text" placeholder="Ваше имя" /></div>
+                  <div class="input"><input type="tel" placeholder="Ваш номер телефона" /></div>
+                  <div class="input"><input type="email" placeholder="Ваш email" /></div>
+                  <button class="btn btn-primary">Отправить заявку</button>
+                </div>
+                <input type="checkbox" checked class="custom-chbox" id="chbox" name="" id="" /><label for="chbox"
+                  >Я принимаю условия <a href="#"> обработки персональных данных</a></label
+                >
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js"
+      integrity="sha512-QwpsxtdZRih55GaU/Ce2Baqoy2tEv9GltjAG8yuTy2k9lHqK7VHHp3wWWe+yITYKZlsT3AaCj49ZxMYPp46iJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script type="text/javascript">
       ymaps.ready(init);
 
