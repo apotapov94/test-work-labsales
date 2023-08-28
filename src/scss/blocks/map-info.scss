@@ -19,11 +19,14 @@
     transform: translateX(-50%);
     bottom: 0;
     align-items: center;
+    height: 1px;
   }
   .places {
     display: flex;
     flex-direction: column;
     grid-gap: 16px;
+    position: absolute;
+    top: 26px;
   }
   .place {
     background: rgba(249, 252, 253, 1);

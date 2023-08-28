@@ -43,3 +43,125 @@
     background: transparent;
   }
 }
+.menu-mobile-mask {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #00000070;
+  z-index: 49;
+  &.active {
+    display: block;
+  }
+}
+.menu-mobile {
+  display: flex;
+  flex-direction: column;
+  background: rgba(33, 45, 85, 1);
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  height: 100vh;
+  left: 0;
+  width: 320px;
+  z-index: 50;
+  padding: 16px;
+  transition: all 0.4s;
+  transform: translateX(-400px);
+  &.active {
+    transform: translateX(0);
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__close {
+    width: 31px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+  }
+  &__nav {
+    margin-top: 12px;
+    ul {
+      grid-gap: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    align-items: flex-end;
+    li {
+      text-align: right;
+    }
+    a {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: right;
+    }
+  }
+  &__arrow-icon {
+    transition: all 0.4s;
+    &--lvl2 {
+      transition: all 0.4s;
+    }
+  }
+  &__lvl1 {
+    margin-right: 14px;
+    &.has-children {
+      margin-right: 0;
+    }
+    span {
+      display: flex;
+      grid-gap: 4px;
+      justify-content: flex-end;
+    }
+    &.active {
+      .menu-mobile__arrow-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  ul.menu-mobile__lvl2 {
+    display: none;
+    grid-gap: 12px;
+    margin-top: 12px;
+    li.active {
+      .menu-mobile__arrow-icon--lvl2 {
+        transform: rotate(180deg);
+      }
+    }
+    a {
+      font-weight: 400;
+    }
+  }
+  ul.menu-mobile__lvl3 {
+    display: none;
+    grid-gap: 12px;
+    margin-top: 12px;
+    a {
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+  &__bottom {
+    text-align: right;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+    align-items: flex-end;
+    a {
+      color: #fff;
+    }
+    button {
+      color: #fff;
+    }
+  }
+}
