@@ -1,2 +1,4 @@
-# test-work-labsales
+npm install
+
+npm run build
  
