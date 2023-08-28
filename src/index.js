@@ -131,6 +131,8 @@ $(".menu-mobile__arrow-icon--lvl2").click(function () {
   }
 });
 
+$("input[type=tel]").mask("7 (999) 999-9999");
+
 $(".header__burger").click(function () {
   $("body").css("overflow", "hidden");
   $(".menu-mobile-mask").addClass("active");
